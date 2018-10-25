@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="60" height="60" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="outdoor tilemap" tilewidth="16" tileheight="16" tilecount="625" columns="25">
+  <image source="outdoor tilemap.png" width="400" height="400"/>
+  <terraintypes>
+   <terrain name="水-草" tile="-1"/>
+   <terrain name="土" tile="-1"/>
+   <terrain name="草" tile="-1"/>
+  </terraintypes>
+  <tile id="0">
+   <properties>
+    <property name="Collidable" type="bool" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="Collidable" type="bool" value="false"/>
+   </properties>
+  </tile>
+  <tile id="31" terrain="2,2,2,0"/>
+  <tile id="32" terrain="2,2,0,0"/>
+  <tile id="33" terrain="2,2,0,0"/>
+  <tile id="34" terrain="2,2,0,0"/>
+  <tile id="35" terrain="2,2,0,0"/>
+  <tile id="36" terrain="2,2,0,0"/>
+  <tile id="37" terrain="2,2,0,2"/>
+  <tile id="39" terrain="2,2,2,1"/>
+  <tile id="40" terrain="2,2,1,1"/>
+  <tile id="41" terrain="2,2,1,2"/>
+  <tile id="43" terrain="2,2,2,"/>
+  <tile id="44" terrain="2,2,,"/>
+  <tile id="45" terrain="2,2,,2"/>
+  <tile id="56" terrain="2,0,2,0"/>
+  <tile id="57" terrain="0,0,0,0"/>
+  <tile id="58" terrain="0,0,0,2"/>
+  <tile id="59" terrain="0,0,2,2"/>
+  <tile id="60" terrain="0,0,2,0"/>
+  <tile id="61" terrain="0,0,0,0"/>
+  <tile id="62" terrain="0,2,0,2"/>
+  <tile id="64" terrain="2,1,2,1"/>
+  <tile id="65" terrain="1,1,1,1"/>
+  <tile id="66" terrain="1,2,1,2"/>
+  <tile id="68" terrain="2,,2,"/>
+  <tile id="70" terrain=",2,,2"/>
+  <tile id="81" terrain="2,0,2,0"/>
+  <tile id="82" terrain="0,0,0,0"/>
+  <tile id="83" terrain="0,2,0,2"/>
+  <tile id="84" terrain="2,2,2,2"/>
+  <tile id="85" terrain="2,0,2,0"/>
+  <tile id="86" terrain="0,0,0,0"/>
+  <tile id="87" terrain="0,2,0,2"/>
+  <tile id="89" terrain="2,1,2,2"/>
+  <tile id="90" terrain="1,1,2,2"/>
+  <tile id="91" terrain="1,2,2,2"/>
+  <tile id="93" terrain="2,,2,2"/>
+  <tile id="94" terrain=",,2,2"/>
+  <tile id="95" terrain=",2,2,2"/>
+  <tile id="106" terrain="2,0,2,0"/>
+  <tile id="107" terrain="0,0,0,0"/>
+  <tile id="108" terrain="0,2,0,2"/>
+  <tile id="110" terrain="2,0,2,0"/>
+  <tile id="111" terrain="0,0,0,0"/>
+  <tile id="112" terrain="0,2,0,2"/>
+  <tile id="131" terrain="2,0,2,0"/>
+  <tile id="132" terrain="0,0,0,0"/>
+  <tile id="133" terrain="0,2,0,0"/>
+  <tile id="134" terrain="2,2,0,0"/>
+  <tile id="135" terrain="2,0,0,0"/>
+  <tile id="136" terrain="0,0,0,0"/>
+  <tile id="137" terrain="0,2,0,2"/>
+  <tile id="156" terrain="2,0,2,2"/>
+  <tile id="157" terrain="0,0,2,2"/>
+  <tile id="158" terrain="0,0,2,2"/>
+  <tile id="159" terrain="0,0,2,2"/>
+  <tile id="160" terrain="0,0,2,2"/>
+  <tile id="161" terrain="0,0,2,2"/>
+  <tile id="162" terrain="0,2,2,2"/>
+  <tile id="291" terrain="2,2,2,"/>
+  <tile id="292" terrain="2,2,,"/>
+  <tile id="293" terrain="2,2,,2"/>
+  <tile id="316" terrain="2,,2,"/>
+  <tile id="318" terrain=",2,,2"/>
+  <tile id="341" terrain="2,,2,2"/>
+  <tile id="342" terrain=",,2,2"/>
+  <tile id="343" terrain=",2,2,2"/>
+  <tile id="421" terrain="2,,2,"/>
+  <tile id="422" terrain=",2,,2"/>
+  <tile id="445" terrain="2,2,,"/>
+  <tile id="446" terrain="2,,,"/>
+  <tile id="447" terrain=",2,,"/>
+  <tile id="448" terrain="2,2,,"/>
+  <tile id="472" terrain=",,,2"/>
+  <tile id="473" terrain=",,2,2"/>
+  <tile id="497" terrain=",2,,2"/>
+  <tile id="521" terrain="2,1,2,1"/>
+  <tile id="522" terrain="1,2,1,2"/>
+  <tile id="545" terrain="2,2,1,1"/>
+  <tile id="546" terrain="2,1,1,1"/>
+  <tile id="547" terrain="1,2,1,1"/>
+  <tile id="548" terrain="2,2,1,1"/>
+  <tile id="570" terrain="1,1,2,2"/>
+  <tile id="571" terrain="1,1,2,1"/>
+  <tile id="572" terrain="1,1,1,2"/>
+  <tile id="573" terrain="1,1,2,2"/>
+  <tile id="596" terrain="2,1,2,1"/>
+  <tile id="597" terrain="1,2,1,2"/>
+ </tileset>
+ <layer name="块层 1" width="60" height="60">
+  <data encoding="base64" compression="zlib">
+   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
+  </data>
+ </layer>
+ <layer name="块层 2" width="60" height="60">
+  <data encoding="base64" compression="zlib">
+   eJztlstOGlEYgA+zLBu1b4CQiPIGQJMCPoIuRI221newtXVJUnfe97rz3lWjW7UXVz6A9dJ3aGvbRb+TzoQjAoJcZjj+X/LlHIwh880/F5QSBEEQBEEQBEEQBEEQBEEQ/GYipNQkvsCXOIWvcDrk95G1hhm6XuMbnMW3+A7nLO1doGsRl3AZV3AV1yzt3aRrC7dxB3dxD/ct7T2i6xhP8BN+xi/41dLec7q+4QVe4hVe43dLe3/Q9RN/4Q3+xj/419Jemzl4pDPrcpTqxh586pT/n0OLzk2cxn4cwESF3niH95rzytCYxRwOWtprkqdxFMdw/J7eLGsuVFw7nQ80fCzTkbGg7T0N80ZHgf0pnlnQVo51ujaqtBUs7RYEQaiXPozwvo+rov3+HlLL0K29tGbUbYcr/N7pdIaM1jT7lFPs1efCpjmXzjaLT9zPYdYR1lE/D7DJDJVcx1Gn2K/3EdeYsdd24swT+FzdvW9rMeo+28z+iM+/AfW1aj5n9eeYcXyVnlMP7fd75t596F2XZlvUaV5rUJpL7812GPbxHaafrak2N/vZq9HNedWebv3uDsq7S3c/c/6369XbN+M8pN3vCkprNRqZv+5MBmim9aC7k+7ca2kP0rXbKN7Mvf6ke73mjb/b0io0l39jFnTF
+  </data>
+ </layer>
+ <layer name="碰撞" width="60" height="60" opacity="0.31">
+  <properties>
+   <property name="Collidable" type="bool" value="false"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztzzEKAEAIA0H9/6evtxYPdAbSZyMAAAAAAAAA4Ib8fWDY1d4s22pzGwAAAAAAPR7zyAAJ
+  </data>
+ </layer>
+</map>
