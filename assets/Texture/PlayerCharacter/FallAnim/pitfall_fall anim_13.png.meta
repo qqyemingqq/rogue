@@ -1,11 +1,9 @@
 {
-  "ver": "2.3.0",
+  "ver": "1.0.0",
   "uuid": "6e3d2dde-0fd3-4cb0-9283-d2e4b8d5bf76",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
-  "premultiplyAlpha": false,
-  "platformSettings": {},
   "subMetas": {
     "pitfall_fall anim_13": {
       "ver": "1.0.3",

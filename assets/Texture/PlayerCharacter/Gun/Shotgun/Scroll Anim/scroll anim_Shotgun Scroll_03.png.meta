@@ -1,11 +1,9 @@
 {
-  "ver": "2.3.0",
+  "ver": "1.0.0",
   "uuid": "5315a7f3-7a15-41b3-99a2-3534b7010df4",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
-  "premultiplyAlpha": false,
-  "platformSettings": {},
   "subMetas": {
     "scroll anim_Shotgun Scroll_03": {
       "ver": "1.0.3",

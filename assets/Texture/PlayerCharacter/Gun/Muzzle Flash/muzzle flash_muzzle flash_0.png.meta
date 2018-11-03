@@ -1,11 +1,9 @@
 {
-  "ver": "2.3.0",
+  "ver": "1.0.0",
   "uuid": "81cfadd8-86c5-49e4-88c2-f2e61e5f51fb",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
-  "premultiplyAlpha": false,
-  "platformSettings": {},
   "subMetas": {
     "muzzle flash_muzzle flash_0": {
       "ver": "1.0.3",
