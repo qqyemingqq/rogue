@@ -48,8 +48,7 @@ cc.Class({
     },
 
     _getRadian: function (point) {
-        // this._radian = Math.PI / 180 * this._getAngle(point);
-        this._radian = cc.v2(point).signAngle(cc.Vec2.RIGHT);
+        this._radian = Math.PI / 180 * this._getAngle(point);
         return this._radian;
     },
 
@@ -86,7 +85,7 @@ cc.Class({
             this.node.setPosition(cc.v2(posX, posY));
         } else {
             var x = Math.cos(this._getRadian(cc.v2(posX, posY))) * radius;
-            var y = -Math.sin(this._getRadian(cc.v2(posX, posY))) * radius;
+            var y = Math.sin(this._getRadian(cc.v2(posX, posY))) * radius;
             console.log(x,y);
             this.node.setPosition(cc.v2(x, y));
         }

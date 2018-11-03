@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "43588689-cc2d-4017-8600-3d8f5f607cfc",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "style 1_player death_08": {
+      "ver": "1.0.3",
+      "uuid": "b77ff2b7-0237-43ac-a5a5-4ea814163880",
+      "rawTextureUuid": "43588689-cc2d-4017-8600-3d8f5f607cfc",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -3,
+      "offsetY": 1.5,
+      "trimX": 8,
+      "trimY": 9,
+      "width": 18,
+      "height": 19,
+      "rawWidth": 40,
+      "rawHeight": 40,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "5315a7f3-7a15-41b3-99a2-3534b7010df4",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "scroll anim_Shotgun Scroll_03": {
+      "ver": "1.0.3",
+      "uuid": "e89120d9-cedb-4121-847b-eafc5c8eab7d",
+      "rawTextureUuid": "5315a7f3-7a15-41b3-99a2-3534b7010df4",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -1,
+      "offsetY": 4.5,
+      "trimX": 16,
+      "trimY": 9,
+      "width": 26,
+      "height": 13,
+      "rawWidth": 60,
+      "rawHeight": 40,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

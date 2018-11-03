@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "f161ba84-545b-4e40-a7f1-c3c71275ab7f",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "pitfall_fall anim_06": {
+      "ver": "1.0.3",
+      "uuid": "5585cf48-fa13-426f-8d5b-09e5aaa11b64",
+      "rawTextureUuid": "f161ba84-545b-4e40-a7f1-c3c71275ab7f",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -0.5,
+      "offsetY": 1.5,
+      "trimX": 33,
+      "trimY": 32,
+      "width": 13,
+      "height": 13,
+      "rawWidth": 80,
+      "rawHeight": 80,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
