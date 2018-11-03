@@ -50,9 +50,9 @@
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 0.3861083984375,
-      "y": 0.3861083984375,
-      "z": 0.3861083984375
+      "x": 0.6147500725152077,
+      "y": 0.6147500725152077,
+      "z": 0.6147500725152077
     },
     "_quat": {
       "__type__": "cc.Quat",
@@ -944,7 +944,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "transparentLight05",
+    "_name": "joystickBg",
     "_objFlags": 0,
     "_parent": {
       "__id__": 1
@@ -958,7 +958,7 @@
     "_level": 1,
     "_components": [
       {
-        "__id__": 27
+        "__id__": 28
       }
     ],
     "_prefab": null,
@@ -972,8 +972,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 48,
-      "height": 48
+      "width": 160,
+      "height": 160
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -982,8 +982,8 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 37,
-      "y": 34,
+      "x": 160,
+      "y": 160,
       "z": 0
     },
     "_scale": {
@@ -1003,14 +1003,14 @@
     "_skewY": 0,
     "_zIndex": 0,
     "_is3DNode": false,
-    "groupIndex": 0,
+    "groupIndex": 1,
     "_rotationX": 0,
     "_rotationY": 0,
     "_id": "88CBFz1T5IC4D7e9uyOHdx"
   },
   {
     "__type__": "cc.Node",
-    "_name": "transparentLight49",
+    "_name": "joystick",
     "_objFlags": 0,
     "_parent": {
       "__id__": 24
@@ -1021,6 +1021,9 @@
     "_components": [
       {
         "__id__": 26
+      },
+      {
+        "__id__": 27
       }
     ],
     "_prefab": null,
@@ -1034,8 +1037,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 29,
-      "height": 29
+      "width": 96,
+      "height": 97
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -1099,6 +1102,27 @@
     "_id": "aaQicH071Fx48u/u54vjmu"
   },
   {
+    "__type__": "7d3adWiRlBFMal8dhWIjNFt",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 25
+    },
+    "_enabled": true,
+    "joystickBg": {
+      "__id__": 28
+    },
+    "joystick": {
+      "__id__": 26
+    },
+    "zVec": {
+      "__type__": "cc.Vec2",
+      "x": 0,
+      "y": 0
+    },
+    "_id": "37FBaTIiRPuLTwKh2qRKVo"
+  },
+  {
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
@@ -1112,15 +1136,15 @@
       "__uuid__": "434e09c2-27e3-4c53-8b0f-734ce3f70b86"
     },
     "_type": 0,
-    "_sizeMode": 1,
-    "_fillType": 0,
+    "_sizeMode": 0,
+    "_fillType": 2,
     "_fillCenter": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": 40,
+      "y": 40
     },
-    "_fillStart": 0,
-    "_fillRange": 0,
+    "_fillStart": 0.7,
+    "_fillRange": 0.3,
     "_isTrimmedMode": true,
     "_state": 0,
     "_atlas": null,
