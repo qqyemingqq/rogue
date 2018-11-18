@@ -7,7 +7,6 @@
 // Learn life-cycle callbacks:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
-
 cc.Class({
     extends: cc.Component,
 
@@ -21,10 +20,31 @@ cc.Class({
             type: cc.Sprite, // optional, default is typeof default
         },
         zVec: cc.Vec2.ZERO,
+        player:{
+            default:null,
+            type:cc.Node,
+        },
+        radian:cc.Float,
+        speed:cc.Integer,
+        playerComponent:{
+            default:null,
+            type:cc.Component
+        },
+        playerAnimation:{
+            default:null,
+            type:cc.Animation
+        },
+        map:{
+            default:null,
+            type:cc.Node
+        }
+
     },
 
     onLoad: function () {
         this._initTouchEvent();
+        this.playerComponent = this.player.getComponent('PlayerController');
+        this.playerAnimation = this.player.getComponent(cc.Animation);
     },
 
 
@@ -38,6 +58,22 @@ cc.Class({
     },
 
     update: function (dt) {
+        if(this.radian!=0){
+            // console.log();
+            if(!this.playerComponent.runStat().isPlaying){
+                this.playerAnimation.play('player_run');
+            }
+            var x = Math.cos(this.radian) * this.speed*dt;
+            var y = -Math.sin(this.radian) * this.speed*dt;
+            // console.log(x);
+            // console.log(y);
+            this.map.x -=x;
+            this.map.y -=y;
+        }else{
+            if(!this.playerComponent.idleStat().isPlaying){
+                this.playerAnimation.play('player_idle');
+            }
+        }
     },
     _allDirectionsMove: function () {
     },
@@ -48,9 +84,12 @@ cc.Class({
     },
 
     _getRadian: function (point) {
-        // this._radian = Math.PI / 180 * this._getAngle(point);
-        this._radian = cc.v2(point).signAngle(cc.Vec2.RIGHT);
-        return this._radian;
+        // this.radian = Math.PI / 180 * this._getAngle(point);
+        this.radian = cc.v2(point).signAngle(cc.Vec2.RIGHT);
+        return this.radian;
+    },
+    _getJoyStickRadian:function(){
+
     },
 
     _getAngle: function (point) {
@@ -69,6 +108,7 @@ cc.Class({
         this._stickPos = touchPos;
         var posX = touchPos.x;
         var posY = touchPos.y;
+
         if (radius > distance) {
             event.target.setPosition(cc.v2(posX, posY));
             return true;
@@ -82,8 +122,15 @@ cc.Class({
         var radius = this.node.parent.width / 2;
         var posX = touchPos.x;
         var posY = touchPos.y;
+        if(posX<=0){
+            this.player.scaleX = -1
+        }else{
+            this.player.scaleX = 1
+        }
+        // console.log(posX,posY);
         if (radius > distance) {
             this.node.setPosition(cc.v2(posX, posY));
+            this._getRadian(cc.v2(posX, posY));
         } else {
             var x = Math.cos(this._getRadian(cc.v2(posX, posY))) * radius;
             var y = -Math.sin(this._getRadian(cc.v2(posX, posY))) * radius;
@@ -96,6 +143,7 @@ cc.Class({
 
     _touchEndEvent: function (event) {
         event.target.setPosition(0, 0);
-        this._speed = 0;
+        // this._speed = 0;
+        this.radian= 0;
     },
 });
