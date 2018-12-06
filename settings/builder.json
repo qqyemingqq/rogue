@@ -25,6 +25,7 @@
     "REMOTE_SERVER_ROOT": "",
     "orientation": "portrait"
   },
+  "renderMode": "0",
   "startScene": "2d2f792f-a40c-49bb-a189-ed176a246e49",
   "title": "hello_world",
   "webOrientation": "auto",
@@ -32,7 +33,7 @@
     "REMOTE_SERVER_ROOT": "",
     "appid": "wxc1c99e1248bfe71b",
     "isSubdomain": false,
-    "orientation": "portrait",
+    "orientation": "landscape",
     "subContext": ""
   },
   "xxteaKey": "07eaf5d6-1bc4-4e",
