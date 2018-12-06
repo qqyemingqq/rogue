@@ -20,29 +20,38 @@ cc.Class({
             type: cc.Sprite, // optional, default is typeof default
         },
         zVec: cc.Vec2.ZERO,
-        player:{
-            default:null,
-            type:cc.Node,
+        player: {
+            default: null,
+            type: cc.Node,
         },
-        radian:{
-            default:0,
-            type:cc.Float
+        radian: {
+            default: 0,
+            type: cc.Float
         },
-        speed:{
-            default:10,
-            type:cc.Integer
+        angle: {
+            default: 0,
+            type: cc.Float
         },
-        playerComponent:{
-            default:null,
-            type:cc.Component
+
+        speed: {
+            default: 10,
+            type: cc.Integer
         },
-        playerAnimation:{
-            default:null,
-            type:cc.Animation
+        playerComponent: {
+            default: null,
+            type: cc.Component
         },
-        map:{
-            default:null,
-            type:cc.Node
+        playerAnimation: {
+            default: null,
+            type: cc.Animation
+        },
+        map: {
+            default: null,
+            type: cc.Node
+        },
+        weapon: {
+            default: null,
+            type: cc.Node
         }
 
     },
@@ -64,20 +73,20 @@ cc.Class({
     },
 
     update: function (dt) {
-        if(this.radian!=0){
-            console.log(this.radian);
+        if (this.radian != 0) {
+            this.angle >= 90 || this.angle <= -90 ? this.weapon.setScaleY(-1) : this.weapon.setScaleY(1);
+            // this.angle > 0?this.weapon.setLocalZOrder(-1):this.weapon.setLocalZOrder(1);
+            this.weapon.setRotation(-this.angle);
 
-            if(!this.playerComponent.runStat().isPlaying){
+            if (!this.playerComponent.runStat().isPlaying) {
                 this.playerAnimation.play('player_run');
             }
-            var x = Math.cos(this.radian) * this.speed*dt;
-            var y = Math.sin(this.radian) * this.speed*dt;
-            console.log(x);
-            console.log(y);
-            this.map.x -=x;
-            this.map.y -=y;
-        }else{
-            if(!this.playerComponent.idleStat().isPlaying){
+            var x = Math.cos(this.radian) * this.speed * dt;
+            var y = Math.sin(this.radian) * this.speed * dt;
+            this.map.x -= x;
+            this.map.y -= y;
+        } else {
+            if (!this.playerComponent.idleStat().isPlaying) {
                 this.playerAnimation.play('player_idle');
             }
         }
@@ -95,14 +104,17 @@ cc.Class({
         this.radian = cc.v2(point).signAngle(cc.Vec2.RIGHT);
         return this.radian;
     },
-    _getJoyStickRadian:function(){
+    _getJoyStickRadian: function () {
 
+    },
+    _radianToAngle: function (radian) {
+        return 180 / Math.PI + radian;
     },
 
     _getAngle: function (point) {
-        var pos = this.node.getPosition();
-        this._angle = Math.atan2(point.y - pos.y, point.x - pos.x) * (180 / Math.PI);
-        return this._angle;
+        // var pos = this.node.getPosition();
+        this.angle = Math.atan2(point.y, point.x) * (180 / Math.PI);
+        return this.angle;
     },
 
     _setSpeed: function (point) {
@@ -112,9 +124,9 @@ cc.Class({
         var touchPos = this.node.convertToNodeSpaceAR(event.getLocation());
         var distance = this._getDistance(touchPos, cc.v2(0, 0));
         var radius = this.node.width / 2;
-        this._stickPos = touchPos;
         var posX = touchPos.x;
         var posY = touchPos.y;
+        // this._getAngle(cc.v2(posX, posY));
 
         if (radius > distance) {
             event.target.setPosition(cc.v2(posX, posY));
@@ -125,13 +137,14 @@ cc.Class({
 
     _touchMoveEvent: function (event) {
         var touchPos = this.node.parent.convertToNodeSpaceAR(event.getLocation());
+
         var distance = this._getDistance(touchPos, cc.v2(0, 0));
         var radius = this.node.parent.width / 2;
         var posX = touchPos.x;
         var posY = touchPos.y;
-        if(posX<=0){
+        if (posX <= 0) {
             this.player.scaleX = -1
-        }else{
+        } else {
             this.player.scaleX = 1
         }
         // console.log(posX,posY);
@@ -143,7 +156,8 @@ cc.Class({
             var y = Math.sin(this._getRadian(cc.v2(posX, posY))) * radius;
             this.node.setPosition(cc.v2(x, y));
         }
-        // this._getAngle(cc.v2(posX, posY));
+        // console.log(cc.v2(posX, posY));
+        this._getAngle(cc.v2(posX, posY));
         // this._setSpeed(cc.v2(posX, posY));
 
     },
@@ -151,6 +165,6 @@ cc.Class({
     _touchEndEvent: function (event) {
         event.target.setPosition(0, 0);
         // this._speed = 0;
-        this.radian= 0;
+        this.radian = 0;
     },
 });
