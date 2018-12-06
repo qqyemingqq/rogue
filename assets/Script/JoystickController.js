@@ -24,8 +24,14 @@ cc.Class({
             default:null,
             type:cc.Node,
         },
-        radian:cc.Float,
-        speed:cc.Integer,
+        radian:{
+            default:0,
+            type:cc.Float
+        },
+        speed:{
+            default:10,
+            type:cc.Integer
+        },
         playerComponent:{
             default:null,
             type:cc.Component
@@ -59,14 +65,15 @@ cc.Class({
 
     update: function (dt) {
         if(this.radian!=0){
-            // console.log();
+            console.log(this.radian);
+
             if(!this.playerComponent.runStat().isPlaying){
                 this.playerAnimation.play('player_run');
             }
             var x = Math.cos(this.radian) * this.speed*dt;
-            var y = -Math.sin(this.radian) * this.speed*dt;
-            // console.log(x);
-            // console.log(y);
+            var y = Math.sin(this.radian) * this.speed*dt;
+            console.log(x);
+            console.log(y);
             this.map.x -=x;
             this.map.y -=y;
         }else{
@@ -133,7 +140,7 @@ cc.Class({
             this._getRadian(cc.v2(posX, posY));
         } else {
             var x = Math.cos(this._getRadian(cc.v2(posX, posY))) * radius;
-            var y = -Math.sin(this._getRadian(cc.v2(posX, posY))) * radius;
+            var y = Math.sin(this._getRadian(cc.v2(posX, posY))) * radius;
             this.node.setPosition(cc.v2(x, y));
         }
         // this._getAngle(cc.v2(posX, posY));
