@@ -11,22 +11,6 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        joystickBg: {
-            default: null,        // The default value will be used only when the component attaching
-            type: cc.Sprite, // optional, default is typeof default
-        },
-        joystick: {
-            default: null,        // The default value will be used only when the component attaching
-            type: cc.Sprite, // optional, default is typeof default
-        },
-        playerContainer: {
-            default: null,
-            type: cc.Node,
-        },
-        player: {
-            default: null,
-            type: cc.Node,
-        },
         radian: {
             default: 0,
             type: cc.Float
@@ -35,23 +19,21 @@ cc.Class({
             default: 0,
             type: cc.Float
         },
-        speed: {
-            default: 10,
-            type: cc.Integer
+        weapon: {
+            default: null,
+            type: cc.Node
         },
-        map: {
+        player: {
             default: null,
             type: cc.Node
         }
+
     },
 
     onLoad: function () {
-        this.node.parent.x = 150;
+        this.node.parent.x = cc.winSize.width -150;
         this.node.parent.y = 150;
         this._initTouchEvent();
-        console.log(this.player);
-        this.playerComponent = this.player.getComponent('PlayerController');
-        this.playerAnimation = this.player.getComponent(cc.Animation);
     },
 
 
@@ -66,17 +48,9 @@ cc.Class({
 
     update: function (dt) {
         if (this.radian != 0) {
-            var x = Math.cos(this.radian) * this.speed * dt;
-            var y = Math.sin(this.radian) * this.speed * dt;
-            this.map.x -= x;
-            this.map.y -= y;
-            if (!this.playerComponent.runStat().isPlaying) {
-                this.playerAnimation.play('player_run');
-            }
-        } else {
-            if (!this.playerComponent.idleStat().isPlaying) {
-                this.playerAnimation.play('player_idle');
-            }
+            this.angle >= 90 || this.angle <= -90 ? this.weapon.setScaleY(-1) : this.weapon.setScaleY(1);
+            // this.angle > 0?this.weapon.setLocalZOrder(-1):this.weapon.setLocalZOrder(1);
+            this.weapon.setRotation(-this.angle);
         }
     },
     _allDirectionsMove: function () {
@@ -99,6 +73,7 @@ cc.Class({
     },
 
     _getAngle: function (point) {
+        // var pos = this.node.getPosition();
         this.angle = Math.atan2(point.y, point.x) * (180 / Math.PI);
         return this.angle;
     },
@@ -125,10 +100,14 @@ cc.Class({
         var touchPos = this.node.parent.convertToNodeSpaceAR(event.getLocation());
 
         var distance = this._getDistance(touchPos, cc.v2(0, 0));
-        var radius = this.node.parent.width / 2;
+        var radius = this.node.parent.width / 2 - this.node.width / 2;
         var posX = touchPos.x;
         var posY = touchPos.y;
-        // console.log(posX,posY);
+        if (posX <= 0) {
+            this.player.scaleX = -1
+        } else {
+            this.player.scaleX = 1
+        }
         if (radius > distance) {
             this.node.setPosition(cc.v2(posX, posY));
             this._getRadian(cc.v2(posX, posY));
