@@ -48,7 +48,7 @@ cc.Class({
 
     update: function (dt) {
         if (this.radian != 0) {
-            this.angle >= 90 || this.angle <= -90 ? this.weapon.setScaleY(-1) : this.weapon.setScaleY(1);
+            this.angle >= 90 || this.angle <= -90 ? this.weapon.scaleY=-1 : this.weapon.scaleY=1;
             // this.angle > 0?this.weapon.setLocalZOrder(-1):this.weapon.setLocalZOrder(1);
             this.weapon.setRotation(-this.angle);
         }

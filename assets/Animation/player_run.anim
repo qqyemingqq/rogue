@@ -1,6 +1,6 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "palyer_run",
+  "_name": "player_run",
   "_objFlags": 0,
   "_native": "",
   "_duration": 0.13333333333333333,
@@ -14,49 +14,49 @@
           {
             "frame": 0,
             "value": {
-              "__uuid__": "07908b7f-2c7b-4a3c-bd35-0cdbb2f46054"
+              "__uuid__": "999e3441-34e0-4a5d-a183-9a894e081b8d"
             }
           },
           {
             "frame": 0.016666666666666666,
             "value": {
-              "__uuid__": "89bee767-c29a-441f-bb39-985e15243587"
+              "__uuid__": "25a519b8-cbdd-4244-beb2-3be4a37958d3"
             }
           },
           {
             "frame": 0.03333333333333333,
             "value": {
-              "__uuid__": "44b77412-8523-4171-bb2c-2a6829c43c7f"
+              "__uuid__": "e8c46574-9db2-41f8-aaf7-4e5a1a8bb4c1"
             }
           },
           {
             "frame": 0.05,
             "value": {
-              "__uuid__": "9408b0c7-e443-46f8-8cb6-2e2bc8ecf2b4"
+              "__uuid__": "d8d883b5-05e7-4844-9875-5ab841b3b41e"
             }
           },
           {
             "frame": 0.06666666666666667,
             "value": {
-              "__uuid__": "463944ee-45cf-4bd8-8703-40ed988b98cf"
+              "__uuid__": "92f2f11c-4cf1-40ab-aab7-dc775b614f3c"
             }
           },
           {
             "frame": 0.08333333333333333,
             "value": {
-              "__uuid__": "a372f6ba-4c5b-4908-8b01-6574af5fc2a3"
+              "__uuid__": "05a4b6eb-48da-4781-a5dd-4b1aff1776f3"
             }
           },
           {
             "frame": 0.1,
             "value": {
-              "__uuid__": "b164fec7-75ad-4ba0-885c-ca58bc16b2df"
+              "__uuid__": "6200b448-c512-4611-9bc2-243673e1abde"
             }
           },
           {
             "frame": 0.11666666666666667,
             "value": {
-              "__uuid__": "4a7bfd88-a67b-40ce-b3dd-a3fd1b693eb7"
+              "__uuid__": "a4298d04-ac97-4cd2-8933-0143d2091acf"
             }
           }
         ]
